@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20180803081330) do
-=======
 ActiveRecord::Schema.define(version: 20180508232642) do
->>>>>>> 554fc4b616ecf32955d401c26c667b82baa6ed80
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -35,16 +31,10 @@ ActiveRecord::Schema.define(version: 20180508232642) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
-<<<<<<< HEAD
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.index ["email"], name: "index_users_on_email", unique: true
-=======
-    t.string "pass"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
->>>>>>> 554fc4b616ecf32955d401c26c667b82baa6ed80
   end
 
 end
