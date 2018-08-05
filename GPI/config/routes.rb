@@ -3,9 +3,14 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
+  get '/signup', to: 'users#new'
+  post '/signup', to: 'users#create'
+
   resources :articles do
   	resources :comments
   end
+
+  resources :users
   
   root 'welcome#index'
 
