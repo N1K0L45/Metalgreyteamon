@@ -1,12 +1,30 @@
 <% if @user.errors.any? %>
   <div id="error_explanation">
     <div class="alert alert-danger">
-      The form contains <%= pluralize(@user.errors.count, "error") %>.
+      Error al crear usuario: <!-- <%= pluralize(@user.errors.count, "error") %>. -->
     </div>
     <ul>
+
     <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
+
+      <% if msg == "Name can't be blank" %>
+        <li><%= "Debe indicar su nombre" %></li>
+      <% end %>
+      <% if msg == "Email can't be blank" %>
+        <li><%= "Debe indicar su email" %></li>
+      <% end %>
+      <% if msg == "Email is invalid" %>
+        <li><%= "Email inválido" %></li>
+      <% end %>
+      <% if msg == "Password can't be blank" %>
+        <li><%= "Debe indicar su contraseña" %></li>
+      <% end %>
+      <% if msg == "Password is too short (minimum is 6 characters)" %>
+        <li><%= "La contraseña es muy corta (mínimo 6 caracteres)" %></li>
+      <% end %>
+
     <% end %>
+
     </ul>
   </div>
 <% end %>
