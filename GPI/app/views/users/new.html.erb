@@ -7,6 +7,9 @@
 
       <%= render 'shared/error_messages' %>
 
+      <%= f.label :tipo, "Tipo de funcionario" %>
+      <%= f.select :tipo, options_for_select(["Encargado de Adquisiciones", "Encargado de Bodega Central", "Encargado de Obra", "Encargado de Bodega de Obra"]) %>
+
       <%= f.label :name, "Nombre" %>
       <%= f.text_field :name, class: 'form-control' %>
 
@@ -18,6 +21,7 @@
 
       <%= f.label :password_confirmation, "Confirme Contraseña" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
+
 
       <%= f.submit "Crear Usuario", class: "btn btn-primary" %>
     <% end %>
