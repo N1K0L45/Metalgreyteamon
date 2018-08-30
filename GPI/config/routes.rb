@@ -2,6 +2,14 @@ Rails.application.routes.draw do
   get 'sessions/new'
 
   get 'users/new'
+  
+  get '/crearoc', to: 'ordencompras#new'
+  post '/crearoc', to: 'ordencompras#create'
+
+  get '/users/:id', to: 'users#show'
+
+  get '/newmaterial', to: 'materials#new'
+  post '/newmaterial', to: 'materials#create'
 
   get 'welcome/index'
 
@@ -13,11 +21,9 @@ Rails.application.routes.draw do
   
   delete '/logout', to: 'sessions#destroy'
 
-  resources :articles do
-    resources :comments
-  end
-
   resources :users
+  resources :ordencompras
+  resources :materials
   
   root 'welcome#index'
 

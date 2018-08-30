@@ -2,10 +2,6 @@
 
 one:
   comprador: MyString
-  material: MyString
-  cantidad: 1
 
 two:
   comprador: MyString
-  material: MyString
-  cantidad: 1

@@ -8,7 +8,7 @@
       <%= render 'shared/error_messages' %>
 
       <%= f.label :tipo, "Tipo de funcionario" %>
-      <%= f.select :tipo, options_for_select(["Encargado de Adquisiciones", "Encargado de Bodega Central", "Encargado de Obra", "Encargado de Bodega de Obra"]) %>
+      <%= f.select :tipo, options_for_select(["Encargado de Adquisiciones", "Encargado de Bodega Central", "Encargado de Obra", "Encargado de Bodega de Obra"]), class: 'form-control' %>
 
       <%= f.label :name, "Nombre" %>
       <%= f.text_field :name, class: 'form-control' %>

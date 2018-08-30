@@ -1,2 +1,0 @@
-class OrdenComprasController < ApplicationController
-end

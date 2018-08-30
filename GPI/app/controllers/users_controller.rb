@@ -18,6 +18,11 @@ class UsersController < ApplicationController
       end
     end
 
+    def nuevaOC
+      @user = User.find(params[:id])
+      render @user.name
+    end
+
     private
 
   def user_params

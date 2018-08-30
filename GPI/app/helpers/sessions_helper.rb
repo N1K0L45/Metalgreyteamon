@@ -1,6 +1,10 @@
 module SessionsHelper
 	def log_in(user)
 		session[:user_id] = user.id
+		#session[:nombre] = user.name
+		#session[:email] = user.email
+		#session[:tipo] = user.tipo
+		#session[:password] = user.password_digest 
 	end
 
 	def current_user
