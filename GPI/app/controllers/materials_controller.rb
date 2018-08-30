@@ -13,6 +13,9 @@ class MaterialsController < ApplicationController
       end
     end
 
+    def show
+    end
+
     private
 
   def material_params

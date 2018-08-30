@@ -11,8 +11,9 @@ class OrdencomprasController < ApplicationController
 	def create
       @ordencompra = Ordencompra.new(oc_params)
       if @ordencompra.save
+        render json: oc_params, status: :created, location: @ordencompra
         flash[:success] = "Orden de compra generada con éxito!"
-        redirect_to user_path(session[:user_id])
+        #redirect_to user_path(session[:user_id])
       else
         render 'new'
       end
